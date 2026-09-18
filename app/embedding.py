@@ -141,8 +141,6 @@ def generate_embeddings(
             result.embeddings
         )
 
-        # Required only because of your
-        # current Voyage rate limit
         time.sleep(31)
 
     return all_embeddings

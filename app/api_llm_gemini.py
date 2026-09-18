@@ -48,7 +48,11 @@ Rules:
 - If the answer cannot be found in the provided context,
   say: "I could not find this information in the employee handbook."
 - Give a concise and clear answer.
-- Include the source handbook page number used for the answer.
+- Cite the printed handbook page number from the context
+  (the number printed at the bottom of the handbook page).
+  Never cite the PDF file page number.
+- Include the source in this exact format:
+  "(source: Page [printed page number] of the employee handbook)"
 
 EMPLOYEE HANDBOOK CONTEXT:
 
@@ -99,7 +103,6 @@ def build_context(results):
     ):
         context = f"""
 Printed handbook page: {metadata["printed_page"]}
-PDF page: {metadata["pdf_page"]}
 
 {document}
 """

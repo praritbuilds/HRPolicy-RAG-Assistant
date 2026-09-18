@@ -145,9 +145,6 @@ def create_chunks(pages):
 
     for page in pages:
 
-        # Important:
-        # don't let one chunk span two pages,
-        # otherwise the citation becomes ambiguous.
         flush_chunk()
         set_current_page(page)
 
